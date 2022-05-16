@@ -11,7 +11,7 @@
             <jsp:include page="./contents/cabecalho.jsp" />
             <div class="table-responsive">
                 <table class="table table-hover">
-                    <caption><h2>List of Books</h2></caption>
+                    <caption><h2>Lista de Livros</h2></caption>
                     <tr>
                         <th>ID</th>
                         <th>Titulo</th>
@@ -27,9 +27,9 @@
                             <td><c:out value="${book.autor}" /></td>
                             <td><c:out value="${book.preco}" /></td>
                             <td>
-                                <a href="<%=request.getContextPath()%>/edit?id=<c:out value='${book.id}' />"><span class="glyphicon glyphicon-pencil"></span></a>
+                                <a href="<%=request.getContextPath()%>/bstore/edit?id=<c:out value='${book.id}' />"><span class="glyphicon glyphicon-pencil"></span></a>
                                 &nbsp;&nbsp;&nbsp;&nbsp;
-                                <a href="<%=request.getContextPath()%>/delete?id=<c:out value='${book.id}' />"><span class="glyphicon glyphicon-trash"></span></a>
+                                <a href="<%=request.getContextPath()%>/bstore/delete?id=<c:out value='${book.id}' />"><span class="glyphicon glyphicon-trash"></span></a>
                             </td>
                         </tr>
                     </c:forEach>

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package local.kcm.bookstoreweb.controller;
 
 import java.io.IOException;
@@ -20,7 +15,7 @@ import local.kcm.bookstoreweb.model.dao.BookDAO;
 
 /**
  *
- * @author devsys-b
+ * @author Kaylane
  */
 public class BookServlet extends HttpServlet {
 
@@ -37,8 +32,8 @@ public class BookServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
 
-        String action = request.getServletPath();
-        Logger.getLogger(BookServlet.class.getName()).log(Level.INFO, "Path solicitado: (0)", action);
+        String action = request.getPathInfo();
+        Logger.getLogger(BookServlet.class.getName()).log(Level.INFO, "Path solicitado: {0}", action);
 
         try {
             switch (action) {
@@ -47,9 +42,6 @@ public class BookServlet extends HttpServlet {
                     break;
                 case "/insert":
                     insertBookAction(request, response);
-                    break;
-                case "/list":
-                    listBook(request, response);
                     break;
                 case "/edit":
                     showEditBookForm(request, response);
@@ -60,6 +52,11 @@ public class BookServlet extends HttpServlet {
                 case "/delete":
                     deleteBookAction(request, response);
                     break;
+                
+                case "/list":
+                default:
+                    listBook(request, response);
+                
             }
         } catch (SQLException ex) {
             throw new ServletException(ex);
@@ -85,14 +82,14 @@ public class BookServlet extends HttpServlet {
 
         request.setAttribute("listaBook", listaBook);
 
-        RequestDispatcher dispatcher = request.getRequestDispatcher("BookList.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/BookList.jsp");
         dispatcher.forward(request, response);
     }
 
     private void showNewBookForm(HttpServletRequest request, HttpServletResponse response)
             throws SQLException, IOException, ServletException {
 
-        RequestDispatcher dispatcher = request.getRequestDispatcher("BookForm.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/BookForm.jsp");
         dispatcher.forward(request, response);
     }
 
@@ -114,7 +111,7 @@ public class BookServlet extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("id"));
         BookDAO bookDAO = new BookDAO();
         Book atualizaBook = bookDAO.getResultById(id);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("BookForm.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/BookForm.jsp");
         request.setAttribute("book", atualizaBook);
         dispatcher.forward(request, response);
     }

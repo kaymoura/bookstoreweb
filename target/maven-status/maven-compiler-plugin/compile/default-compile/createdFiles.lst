@@ -1,4 +1,10 @@
+local\kcm\bookstoreweb\controller\UserServlet.class
+local\kcm\bookstoreweb\controller\BookServlet.class
+local\kcm\bookstoreweb\model\dao\UserDAO.class
+local\kcm\bookstoreweb\controller\UserLoginServlet.class
+local\kcm\bookstoreweb\model\bean\Book.class
 local\kcm\bookstoreweb\model\dao\BookDAO.class
 connection\MySQLConnection.class
-local\kcm\bookstoreweb\controller\BookServlet.class
-local\kcm\bookstoreweb\model\bean\Book.class
+local\kcm\bookstoreweb\controller\UserLogoutServlet.class
+local\kcm\bookstoreweb\controller\AutorizaUserFilter.class
+local\kcm\bookstoreweb\model\bean\User.class

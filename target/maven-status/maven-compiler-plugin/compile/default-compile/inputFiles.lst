@@ -1,4 +1,10 @@
 D:\Repositorio-TB\bookstoreweb\src\main\java\local\kcm\bookstoreweb\model\dao\BookDAO.java
+D:\Repositorio-TB\bookstoreweb\src\main\java\local\kcm\bookstoreweb\controller\AutorizaUserFilter.java
+D:\Repositorio-TB\bookstoreweb\src\main\java\local\kcm\bookstoreweb\controller\UserLogoutServlet.java
 D:\Repositorio-TB\bookstoreweb\src\main\java\connection\MySQLConnection.java
 D:\Repositorio-TB\bookstoreweb\src\main\java\local\kcm\bookstoreweb\model\bean\Book.java
 D:\Repositorio-TB\bookstoreweb\src\main\java\local\kcm\bookstoreweb\controller\BookServlet.java
+D:\Repositorio-TB\bookstoreweb\src\main\java\local\kcm\bookstoreweb\controller\UserLoginServlet.java
+D:\Repositorio-TB\bookstoreweb\src\main\java\local\kcm\bookstoreweb\model\bean\User.java
+D:\Repositorio-TB\bookstoreweb\src\main\java\local\kcm\bookstoreweb\model\dao\UserDAO.java
+D:\Repositorio-TB\bookstoreweb\src\main\java\local\kcm\bookstoreweb\controller\UserServlet.java
